@@ -1,8 +1,28 @@
 aid: nuvocargo
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nuvocargo.png
 name: Nuvocargo
-description: 'Nuvocargo is a company surfaced as a portfolio company of homebrew, qed-investors and added
-  to the API Evangelist network as a stub for enrichment. Sector: aerospace-defense. This profile is a
-  lead awaiting the enrichment pipeline.'
+description: 'Nuvocargo is an AI-powered freight-management platform for North American
+  truckload logistics, focused on the US-Mexico-Canada cross-border corridor. Its
+  "Nuvo AI" system coordinates a network of specialized agents (quoting, negotiation,
+  booking, dispatch, tracking, exception handling, audit, and payment) to automate
+  the freight load lifecycle, and it pairs that software with licensed freight
+  brokerage, managed transportation, and customs-brokerage services. The company was
+  surfaced through the API Evangelist network as a portfolio company of Homebrew and
+  QED Investors. As of this enrichment pass Nuvocargo publishes no public developer
+  API, OpenAPI specification, or developer portal; onboarding is contact-gated
+  ("zero-integration" pilots), so this profile captures the company identity,
+  legal/resource surface, and domain-security posture rather than API artifacts.'
 url: https://raw.githubusercontent.com/api-evangelist/nuvocargo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,10 +33,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Aerospace Defense
+- Logistics
+- Freight
+- Supply Chain
+- Cross-Border
+- Trucking
+- Transportation
+- Customs
+- Artificial Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,5 +51,20 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/nuvocargo-domain-security.yml
 - type: Website
   url: https://www.nuvocargo.com
+- type: Blog
+  url: https://www.nuvocargo.com/knowledge-hub
+- type: ChangeLog
+  url: https://www.nuvocargo.com/product-updates
+- type: TermsOfService
+  url: https://www.nuvocargo.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.nuvocargo.com/privacy-policy
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
