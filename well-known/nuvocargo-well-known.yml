@@ -2,17 +2,24 @@ generated: '2026-07-20'
 method: searched
 source: live probe of https://www.nuvocargo.com/.well-known/*
 host: https://www.nuvocargo.com
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-notes: No well-known discovery documents are published. Nuvocargo exposes no public
-  API, OAuth authorization server, or agent-plugin surface; the product is a
-  contact-gated AI freight-management platform (customer web app at app.nuvocargo.com).
+notes: No well-known discovery documents are published. Nuvocargo exposes no public API, OAuth authorization
+  server, or agent-plugin surface; the product is a contact-gated AI freight-management platform (customer
+  web app at app.nuvocargo.com).
+hosts:
+- host: https://www.nuvocargo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
